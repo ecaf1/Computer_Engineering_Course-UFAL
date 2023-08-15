@@ -24,3 +24,12 @@ void push(Stack *stack, char item ){
 void pop(Stack *starck){
     printf(starck->stack[--starck->current_size]);
 }
+
+
+char peek(Stack *stack){
+    if (is_empty(stack)){
+        printf("Stack underflow");
+        return -1;
+    }
+    else return stack->stack[stack->current_size - 1];
+}
